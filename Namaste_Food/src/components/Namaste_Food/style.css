@@ -1,0 +1,305 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    width: 180px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.nav-items {
+    padding: 0;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-items > ul > li {
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-items > ul > li:hover {
+    color: #ff6347;
+    cursor: pointer;
+}
+
+/* Restro Cards Section */
+.restro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.restro-card {
+    width: 320px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px;  /* Fixed height for the card */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+.restro-card:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.restro-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.restro-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    flex-grow: 0; /* Prevent heading from growing */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restro-card p {
+    font-size: 16px;
+    color: #777;
+    flex-grow: 1; /* Allow the paragraph to take remaining space if necessary */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate text if it's too long */
+}
+
+.restro-card .content {
+    overflow: auto;
+    flex-grow: 1; /* Allow content to fill the remaining space */
+}
+
+/* Shimmer Effect for Loading */
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.shimmer-card {
+    width: 320px;
+    height: 400px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Search Bar */
+.search {
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search button {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #e55347;
+}
+
+/* Filter Button */
+.filter-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Login Button */
+.login {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #218838;
+}
+
+/* Filter Section */
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* User Card */
+.user-card {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+}
+
+.user-card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.user-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* UserCard Section */
+.user-card {
+    width: 400px; /* Adjust the width for a single card */
+    /* background-color: #fff; */
+    background-color: #e0f7fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px auto; /* Center the card on the page */
+    font-family: 'Arial', sans-serif;
+    max-width: 90%; /* Ensure it fits well on smaller screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the card */
+.user-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Avatar Image */
+.user-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Name Section */
+.user-card h2 {
+    font-size: 26px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Location Section */
+.user-card h3 {
+    font-size: 18px;
+    color: #777;
+    margin: 5px 0;
+}
+
+/* About Me Section */
+.user-card h4 {
+    font-size: 16px;
+    color: #888;
+    margin-top: 15px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    max-height: 120px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+/* Optional: Adding a little responsiveness */
+@media (max-width: 600px) {
+    .user-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .user-card h2 {
+        font-size: 22px;
+    }
+
+    .user-card h3 {
+        font-size: 16px;
+    }
+
+    .user-card h4 {
+        font-size: 14px;
+    }
+}
